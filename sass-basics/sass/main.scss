@@ -1,0 +1,46 @@
+$primary-color : #2cc459;
+$accent-color : #f1f2f3;
+$secondary-color : orange;
+$font-stack : Arial, sans-serif;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: $primary-color;
+    font-family: $font-stack;
+    
+}
+
+.showcase{
+    margin: 20px auto;
+    padding: 20px auto;
+    height: 500px;
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        a:hover{
+            color: $secondary-color;
+        }
+    }
+    li{
+        padding : 15px;
+    }
+    a{
+        text-decoration: none;
+        color : $accent-color;
+    }
+    #{&}-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
