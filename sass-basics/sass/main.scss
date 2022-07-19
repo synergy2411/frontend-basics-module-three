@@ -1,17 +1,8 @@
-$primary-color : #2cc459;
-$accent-color : #f1f2f3;
-$secondary-color : orange;
-$font-stack : Arial, sans-serif;
+@import 'config';
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 body {
     background-color: $primary-color;
     font-family: $font-stack;
-    
 }
 
 .showcase{
