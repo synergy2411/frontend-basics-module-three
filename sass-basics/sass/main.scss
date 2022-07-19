@@ -1,13 +1,18 @@
+@use 'settings';
 @import 'config';
+@import 'utils';
+@import 'buttons';
 
 body {
-    background-color: $primary-color;
     font-family: $font-stack;
+    max-width: 1100px;
 }
 
 .showcase{
-    margin: 20px auto;
-    padding: 20px auto;
+    @include set-bg-color($primary-color);
+    width: 80%;
+    margin: 0 auto ;
+    padding: 0px auto;
     height: 500px;
     nav{
         display: flex;
@@ -27,7 +32,7 @@ body {
     }
     a{
         text-decoration: none;
-        color : $accent-color;
+        color : set-font-color($primary-color);
     }
     #{&}-content{
         display: flex;

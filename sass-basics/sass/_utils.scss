@@ -1,0 +1,47 @@
+@function set-font-color($color){
+    @if(lightness($color) > 70){
+        @return #444;
+    }@else{
+        @return #f2f2f2;
+    }
+}
+
+@mixin set-bg-color ($color) {
+    background-color: $color;
+    color: set-font-color($color);
+}
+
+$spaces : (1,2,3,4,5);
+
+@each $space in $spaces{
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+    .my-#{$space}{
+        margin: #{$space}rem 0;
+    }
+    .mx-#{$space}{
+        margin: 0 #{$space}rem;
+    }
+    .p-#{$space}{
+        padding: #{$space}rem;
+    }
+    .py-#{$space}{
+        padding: #{$space}rem 0;
+    }
+    .px-#{$space}{
+        padding: 0 #{$space}rem;
+    }
+}
+
+@media (max-width : 700px){
+    .showcase{
+        &-content{
+            font-weight: 600;
+            text-align: center;
+        }
+        img{
+            display: none;
+        }
+    }
+}
