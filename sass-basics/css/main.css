@@ -189,3 +189,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* :root{
+  --primary-color : red;
+  --secondary-color: green;
+}
+
+body{
+  background-color: var(--primary-color);
+} */
